@@ -146,7 +146,7 @@ async function carregarPerguntas() {
 async function iniciar() {
   let nome = null;
   try { nome = sessionStorage.getItem("jogador"); } catch (e) { /* sem storage */ }
-  if (!nome) { location.replace("index.html"); return; }
+  if (!nome) { location.replace("../index.html"); return; }
   jogador = nome;
   try {
     fila = embaralhar((await carregarPerguntas()).filter(valida));

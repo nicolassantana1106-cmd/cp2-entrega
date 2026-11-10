@@ -24,15 +24,15 @@ Quiz de tecnologia sobre **redes e internet** (HTTP, HTTPS, DNS, IP, URL, métod
 O jogo carrega o `perguntas.json` com `fetch`. Funciona de qualquer jeito:
 
 - no GitHub Pages, no **Live Server** do VS Code ou com `python -m http.server` (carrega direto do JSON);
-- com duplo clique no `index.html`: o navegador bloqueia o `fetch`, então o jogo usa `js/perguntas-reserva.js`, uma cópia gerada do JSON.
+- com duplo clique no `index.html` da raiz do repositório: o navegador bloqueia o `fetch`, então o jogo usa `handshake cp2/js/perguntas-reserva.js`, uma cópia gerada do JSON.
 
-**Ao editar o `perguntas.json`, rode `python gerar-reserva.py`** para atualizar a reserva.
+**Ao editar `handshake cp2/perguntas.json`, rode `python gerar-reserva.py` dentro da pasta `handshake cp2`** para atualizar a reserva.
 
 ## Estrutura
 
 | Arquivo | Função |
 |---------|--------|
-| `index.html` / `js/inicio.js` | Página inicial e campo de nome |
+| `../index.html` / `js/inicio.js` | Página inicial na raiz e campo de nome |
 | `jogo.html` / `js/jogo.js` | Perguntas, feedback, pontuação, ranking e replay |
 | `css/style.css` | Identidade visual (paleta escura, Space Grotesk + Inter) |
 | `perguntas.json` | Banco de 10 perguntas (fonte dos dados) |

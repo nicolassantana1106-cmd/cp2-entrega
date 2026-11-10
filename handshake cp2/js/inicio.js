@@ -15,6 +15,6 @@ form.addEventListener("submit", (ev) => {
     return;
   }
   try { sessionStorage.setItem("jogador", nome); } catch (e) { /* sem storage */ }
-  location.href = "jogo.html";
+  location.href = "handshake cp2/jogo.html";
 });
 input.addEventListener("input", () => { erro.textContent = ""; input.removeAttribute("aria-invalid"); });
