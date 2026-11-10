@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jogar — Handshake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <header class="container topo">
+    <a class="marca" href="index.html">hand<span>shake</span></a>
+  </header>
+  <main class="container" id="conteudo">
+    <div class="jogo" id="quiz">
+      <div class="progresso">
+        <span id="progresso-texto">Carregando…</span>
+        <div class="progresso-barra" aria-hidden="true"><i></i></div>
+      </div>
+      <h1 class="pergunta" id="pergunta" tabindex="-1">Carregando perguntas…</h1>
+      <ul class="alternativas" id="alternativas"></ul>
+      <div class="feedback" id="feedback" role="status" aria-live="polite">
+        <p>Escolha uma alternativa com o mouse ou com Tab e Enter.</p>
+      </div>
+      <div class="acoes">
+        <button class="botao" id="proxima" type="button" disabled>Próxima</button>
+      </div>
+    </div>
+
+    <section class="jogo" id="resultado" hidden aria-labelledby="titulo-fim">
+      <h1 class="pergunta titulo-fim" id="titulo-fim" tabindex="-1">Fim de jogo!</h1>
+      <p class="placar" id="placar"></p>
+      <h2 class="ranking-titulo">Ranking da sessão</h2>
+      <ol class="ranking" id="ranking"></ol>
+      <div class="acoes">
+        <button class="botao" id="reiniciar" type="button">Jogar novamente</button>
+        <a href="index.html">Trocar jogador</a>
+      </div>
+    </section>
+  </main>
+  <script src="js/jogo.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Handshake — quiz sobre redes e internet</title>
+  <meta name="description" content="Quiz de tecnologia sobre como a internet funciona: HTTP, DNS, IP e mais.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <header class="container topo">
+    <a class="marca" href="index.html">hand<span>shake</span></a>
+  </header>
+  <main class="container" id="conteudo">
+    <section class="hero" aria-labelledby="titulo">
+      <h1 id="titulo">Handshake</h1>
+      <p class="tema">Tema: redes e internet</p>
+      <p class="descricao">Do clique no link até a página na tela, muita coisa acontece. Responda perguntas sobre HTTP, DNS e status de resposta e veja se você sabe o que acontece nos bastidores.</p>
+      <form class="form-nome" id="form-nome" novalidate>
+        <label for="nome">Seu nome</label>
+        <input id="nome" name="nome" type="text" maxlength="20" autocomplete="nickname" aria-describedby="erro-nome" required>
+        <p class="erro-campo" id="erro-nome" role="alert"></p>
+        <button class="botao" type="submit">Jogar</button>
+      </form>
+    </section>
+    <section class="regras" aria-label="Como funciona">
+      <div><h2>Uma pergunta por vez</h2><p>Escolha uma entre quatro alternativas.</p></div>
+      <div><h2>Feedback na hora</h2><p>Você vê se acertou e lê uma explicação curta.</p></div>
+      <div><h2>Fonte para aprender mais</h2><p>Cada resposta traz um link de referência.</p></div>
+    </section>
+  </main>
+  <footer class="container rodape">Projeto acadêmico — CP1. Integrantes no README do repositório.</footer>
+  <script src="js/inicio.js"></script>
+</body>
+</html>

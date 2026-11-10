@@ -1,0 +1,171 @@
+/* Handshake — CSS base (CP1) */
+:root {
+  --fundo: #1e272e;
+  --painel: #2f3640;
+  --papel: #f5f6fa;
+  --tinta: #1e272e;
+  --alternativa: #40739e;
+  --alternativa-hover: #4a84b5;
+  --destaque: #3498db;
+  --acerto: #44bd32;
+  --acerto-texto: #6ee05a;
+  --erro: #b33a3a;
+  --texto: #f5f6fa;
+  --texto-suave: #b2bec3;
+  --raio: 10px;
+  --fonte-titulo: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --fonte-texto: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+h1, h2, h3 { font-family: var(--fonte-titulo); line-height: 1.1; margin: 0; }
+p { margin: 0; max-width: 62ch; }
+a { color: #7ec8f5; }
+:focus-visible { outline: 3px solid #fbc531; outline-offset: 3px; }
+
+.container { width: min(100% - 2rem, 760px); margin-inline: auto; }
+.topo { padding-block: 1.25rem; }
+.marca {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--texto);
+  text-decoration: none;
+}
+.marca span { color: var(--destaque); }
+
+/* Botões */
+.botao {
+  display: inline-block;
+  min-height: 48px;
+  padding: 0.75rem 1.75rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--destaque);
+  color: #0b1a24;
+  font: 700 1.0625rem var(--fonte-titulo);
+  text-decoration: none;
+  cursor: pointer;
+}
+.botao:hover { background: #5dade2; }
+.botao[disabled], .botao[aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
+
+/* Página inicial */
+.hero { padding-block: 3rem 2rem; display: grid; gap: 1.5rem; }
+.hero h1 { font-size: clamp(3rem, 14vw, 6.5rem); letter-spacing: -0.03em; }
+.hero .tema { color: var(--destaque); font: 600 1.25rem var(--fonte-titulo); }
+.hero .descricao { color: var(--texto-suave); font-size: 1.1875rem; }
+.hero .botao { justify-self: start; margin-top: 0.5rem; }
+.regras { padding-block: 1rem 3rem; display: grid; gap: 0.75rem; }
+.regras div { background: var(--painel); border-radius: var(--raio); padding: 1rem 1.25rem; }
+.regras h2 { font-size: 1.0625rem; margin-bottom: 0.25rem; }
+.regras p { color: var(--texto-suave); font-size: 0.9375rem; }
+.rodape { padding-block: 1.5rem 2rem; color: var(--texto-suave); font-size: 0.875rem; }
+
+[hidden] { display: none !important; }
+
+/* Tela de jogo */
+.jogo { display: grid; gap: 1rem; padding-block: 0.5rem 2.5rem; }
+.progresso {
+  background: var(--painel);
+  border-radius: var(--raio);
+  padding: 0.875rem 1.25rem;
+  text-align: center;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+}
+.progresso-barra { height: 6px; margin-top: 0.5rem; background: var(--fundo); border-radius: 3px; overflow: hidden; }
+.progresso-barra i { display: block; height: 100%; width: 30%; background: var(--destaque); }
+.pergunta {
+  background: var(--papel);
+  color: var(--tinta);
+  border-radius: var(--raio);
+  padding: 1.5rem;
+  font: 700 clamp(1.25rem, 4.5vw, 1.625rem) var(--fonte-titulo);
+  line-height: 1.25;
+}
+.alternativas { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 0; padding: 0; list-style: none; }
+.alternativa {
+  width: 100%;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  border: 3px solid transparent;
+  border-radius: var(--raio);
+  background: var(--alternativa);
+  color: #fff;
+  font: 500 1rem var(--fonte-texto);
+  text-align: left;
+  cursor: pointer;
+}
+.alternativa:hover { background: var(--alternativa-hover); }
+.alternativa .letra {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.25);
+  font: 700 0.9375rem var(--fonte-titulo);
+}
+/* Estados que o CP2 vai ativar via JavaScript */
+.alternativa.correta { background: var(--acerto); border-color: #fff; color: #0b2a06; }
+.alternativa.correta .letra { background: rgba(0, 0, 0, 0.18); }
+.alternativa.errada { background: var(--erro); border-color: #fff; color: #fff; }
+.alternativa:disabled { cursor: default; }
+
+.feedback {
+  background: var(--painel);
+  border-radius: var(--raio);
+  padding: 1rem 1.25rem;
+  min-height: 4.5rem;
+}
+.feedback strong { display: block; font-family: var(--fonte-titulo); }
+.feedback.acerto strong { color: var(--acerto-texto); }
+.feedback.erro strong { color: #ff7f6b; }
+.feedback p { color: var(--texto-suave); font-size: 0.9375rem; }
+.acoes { display: flex; justify-content: center; }
+
+@media (max-width: 600px) {
+  .alternativas { grid-template-columns: 1fr; }
+  .pergunta { padding: 1.25rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .alternativa, .botao { transition: background-color 0.15s ease; }
+}
+
+/* CP2 */
+.pular { position: absolute; left: -999px; }
+.pular:focus { left: 1rem; top: 1rem; z-index: 10; background: #fbc531; color: #1e272e; padding: 0.5rem 1rem; border-radius: 6px; }
+.form-nome { display: grid; gap: 0.5rem; max-width: 420px; }
+.form-nome label { font: 600 1rem var(--fonte-titulo); }
+.form-nome input { min-height: 48px; padding: 0.5rem 0.875rem; border: 2px solid var(--texto-suave); border-radius: var(--raio); background: var(--painel); color: var(--texto); font: inherit; }
+.form-nome input[aria-invalid="true"] { border-color: #ff9f8f; }
+.erro-campo { color: #ff9f8f; min-height: 1.5rem; font-size: 0.9375rem; }
+.form-nome .botao { justify-self: start; }
+.alternativa .texto { flex: 1; }
+.alternativa .estado { font: 700 0.875rem var(--fonte-titulo); white-space: nowrap; }
+.alternativa.errada { border-style: dashed; }
+.titulo-fim { background: #f5b300; color: #1e272e; text-align: center; }
+.placar { background: var(--painel); border-radius: var(--raio); padding: 1rem; text-align: center; font: 600 1.375rem var(--fonte-titulo); }
+.ranking-titulo { font-size: 1.125rem; text-align: center; }
+.ranking { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+.ranking li { padding: 0.75rem 1rem; border-radius: var(--raio); background: var(--painel); text-align: center; border: 3px solid transparent; }
+.ranking li.pos1 { background: #f5b300; color: #1e272e; }
+.ranking li.pos2 { background: #b2bec3; color: #1e272e; }
+.ranking li.pos3 { background: #b33a3a; color: #fff; }
+.ranking li.atual { border-color: #fff; font-weight: 700; }
+.acoes { flex-direction: column; align-items: center; gap: 0.75rem; }

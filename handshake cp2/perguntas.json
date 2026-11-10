@@ -1,0 +1,122 @@
+[
+  {
+    "pergunta": "O que significa a sigla HTTP?",
+    "alternativas": [
+      "HyperText Transfer Protocol",
+      "High Transfer Text Process",
+      "Host Transmission Type Protocol",
+      "HyperText Transmission Program"
+    ],
+    "resposta": 0,
+    "explicacao": "HTTP é o HyperText Transfer Protocol, o protocolo usado para transferir páginas e outros recursos entre cliente e servidor.",
+    "fonte": "https://developer.mozilla.org/pt-BR/docs/Glossary/HTTP"
+  },
+  {
+    "pergunta": "O que o HTTPS adiciona ao HTTP?",
+    "alternativas": [
+      "Compressão automática de imagens",
+      "Criptografia da comunicação com TLS",
+      "Cache permanente no navegador",
+      "Velocidade de download ilimitada"
+    ],
+    "resposta": 1,
+    "explicacao": "O HTTPS é o HTTP sobre uma conexão criptografada (TLS), que protege os dados contra leitura e alteração no caminho.",
+    "fonte": "https://developer.mozilla.org/pt-BR/docs/Glossary/HTTPS"
+  },
+  {
+    "pergunta": "Qual é a função do DNS?",
+    "alternativas": [
+      "Proteger o computador contra vírus",
+      "Armazenar os arquivos do site",
+      "Traduzir nomes de domínio em endereços IP",
+      "Enviar e-mails entre servidores"
+    ],
+    "resposta": 2,
+    "explicacao": "O DNS funciona como uma lista telefônica da internet: converte nomes como exemplo.com no endereço IP do servidor.",
+    "fonte": "https://developer.mozilla.org/pt-BR/docs/Glossary/DNS"
+  },
+  {
+    "pergunta": "O que identifica um dispositivo em uma rede que usa o protocolo IP?",
+    "alternativas": [
+      "O endereço IP",
+      "O nome do navegador",
+      "A cor do cabo",
+      "O tamanho da tela"
+    ],
+    "resposta": 0,
+    "explicacao": "O endereço IP é um número que identifica um dispositivo na rede e permite que os pacotes cheguem ao destino certo.",
+    "fonte": "https://developer.mozilla.org/pt-BR/docs/Glossary/IP_Address"
+  },
+  {
+    "pergunta": "O que é uma URL?",
+    "alternativas": [
+      "Um tipo de vírus",
+      "Um protocolo de e-mail",
+      "Um navegador alternativo",
+      "O endereço de um recurso na web"
+    ],
+    "resposta": 3,
+    "explicacao": "A URL indica onde um recurso está e como acessá-lo, por exemplo https://exemplo.com/pagina.",
+    "fonte": "https://developer.mozilla.org/pt-BR/docs/Glossary/URL"
+  },
+  {
+    "pergunta": "Qual método HTTP é usado para pedir (ler) um recurso sem alterá-lo?",
+    "alternativas": [
+      "POST",
+      "GET",
+      "DELETE",
+      "PUT"
+    ],
+    "resposta": 1,
+    "explicacao": "O GET solicita dados de um recurso e não deve modificá-lo no servidor.",
+    "fonte": "https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Reference/Methods/GET"
+  },
+  {
+    "pergunta": "Qual método HTTP é usado normalmente para enviar dados e criar um recurso no servidor?",
+    "alternativas": [
+      "GET",
+      "HEAD",
+      "POST",
+      "OPTIONS"
+    ],
+    "resposta": 2,
+    "explicacao": "O POST envia dados no corpo da requisição e costuma ser usado para criar recursos, como um cadastro.",
+    "fonte": "https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Reference/Methods/POST"
+  },
+  {
+    "pergunta": "O que indica o código de status HTTP 301?",
+    "alternativas": [
+      "Redirecionamento permanente",
+      "Erro no servidor",
+      "Recurso não encontrado",
+      "Requisição bem-sucedida"
+    ],
+    "resposta": 0,
+    "explicacao": "O 301 (Moved Permanently) informa que o recurso mudou de endereço de forma definitiva.",
+    "fonte": "https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Reference/Status/301"
+  },
+  {
+    "pergunta": "Qual código de status HTTP indica que o recurso não foi encontrado?",
+    "alternativas": [
+      "200",
+      "301",
+      "500",
+      "404"
+    ],
+    "resposta": 3,
+    "explicacao": "O 404 (Not Found) significa que o servidor não encontrou o recurso pedido.",
+    "fonte": "https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Reference/Status/404"
+  },
+  {
+    "pergunta": "O que indica o código de status HTTP 500?",
+    "alternativas": [
+      "Acesso negado",
+      "Erro interno do servidor",
+      "Redirecionamento temporário",
+      "Recurso criado"
+    ],
+    "resposta": 1,
+    "explicacao": "O 500 (Internal Server Error) indica que o servidor encontrou um problema inesperado ao processar a requisição.",
+    "fonte": "https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Reference/Status/500"
+  }
+]
